@@ -20,12 +20,25 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    document.addEventListener( "submit" , (e)=> {
+    document.addEventListener("submit", (e) => {
 
         if (!form.checkValidity()) {
             e.preventDefault();
-        }else{
+        } else {
             alert("فرم با موفقیت ارسال شد.");
         }
     });
+
+    document.getElementById("forceSubmit").addEventListener("click", () => {
+        form.submit();
+    });
+
+    document.getElementById("requestSubmit").addEventListener("click", () => {
+        form.requestSubmit();
+    });
+
 });
+
+
+
+
